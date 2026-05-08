@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Santonu Paul Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #050816;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* Navbar */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+        }
+
+        nav h1 {
+            font-size: 28px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #00a2ff;
+            font: bold 28px 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #60a5fa;
+        }
+
+        /* Hero */
+        .hero {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            background:
+                radial-gradient(circle at top, rgba(59, 130, 246, 0.3), transparent 30%),
+                radial-gradient(circle at bottom, rgba(168, 85, 247, 0.3), transparent 30%),
+                #050816;
+            animation: fadeIn 2s ease;
+        }
+
+        .hero-content {
+            animation: slideUp 1.5s ease;
+        }
+
+        .hero h2 {
+            font-size: 90px;
+            text-transform: uppercase;
+            background: linear-gradient(to right, white, #60a5fa, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            margin-top: 20px;
+            font-size: 22px;
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 900px;
+            line-height: 1.7;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 15px 35px;
+            border-radius: 40px;
+            text-decoration: none;
+            color: white;
+            background: linear-gradient(to right, #2563eb, #7c3aed);
+            transition: 0.4s;
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+        }
+
+        .btn:hover {
+            transform: scale(1.08);
+            box-shadow: 0 0 40px rgba(168, 85, 247, 0.7);
+        }
+
+        /* Sections */
+        section {
+            padding: 120px 10%;
+            animation: fadeIn 2s ease;
+        }
+
+        .section-title {
+            font-size: 50px;
+            margin-bottom: 20px;
+            color: #60a5fa;
+        }
+
+        .section-text {
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.8;
+            max-width: 1000px;
+        }
+
+        /* Skills */
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 40px 20px;
+            border-radius: 20px;
+            text-align: center;
+            transition: 0.5s;
+            animation: zoomIn 1.5s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px) scale(1.03);
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 0 25px rgba(59, 130, 246, 0.4);
+        }
+
+        .card h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        /* Images */
+        .image-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .image-section img {
+            width: 100%;
+            border-radius: 20px;
+            transition: 0.5s;
+            animation: slideLeft 1.5s ease;
+        }
+
+        .image-section img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(168, 85, 247, 0.5);
+        }
+
+        footer {
+            padding: 40px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* PowerPoint Style Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(80px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideLeft {
+            from {
+                transform: translateX(-100px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @media(max-width:768px) {
+            nav {
+                padding: 20px;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .hero h2 {
+                font-size: 55px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .section-title {
+                font-size: 38px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h1>Santonu!</h1>
+
+
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#trading">Trading</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Santonu Paul</h2>
+
+            <p>
+                I am a 14 year old Full Stack Developer from Kolkata, West Bengal.
+                I work with Python, JavaScript, HTML, CSS and also study trading in
+                Indian Share Market, Forex, Bitcoin, Foreign Currencies and XAUUSD.
+            </p>
+
+            <a href="#about" class="btn">Explore Portfolio</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+
+        <p class="section-text">
+            I create futuristic websites and interactive user interfaces.
+            I enjoy coding modern web projects and learning about financial markets.
+            My goal is to build powerful digital experiences while growing as a developer and trader.
+        </p>
+
+        <div class="image-section">
+            <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop"
+                alt="coding">
+
+            <img src="https://images.unsplash.com/photo-1642104704074-907c0698cbd9?q=80&w=1200&auto=format&fit=crop"
+                alt="trading">
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2 class="section-title">My Skills</h2>
+
+        <div class="skills">
+            <div class="card">
+                <h3>Python</h3>
+                <p>Backend programming and automation.</p>
+            </div>
+
+            <div class="card">
+                <h3>JavaScript</h3>
+                <p>Interactive websites and web apps.</p>
+            </div>
+
+            <div class="card">
+                <h3>HTML & CSS</h3>
+                <p>Modern responsive UI designing.</p>
+            </div>
+
+            <div class="card">
+                <h3>Trading</h3>
+                <p>Forex, Bitcoin, XAUUSD and stocks.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="trading">
+        <h2 class="section-title">Trading Journey</h2>
+
+        <p class="section-text">
+            I actively learn technical analysis, market psychology,
+            risk management and price action in different global markets.
+        </p>
+
+        <div class="image-section">
+            <img src="https://images.unsplash.com/photo-1639322537228-f710d846310a?q=80&w=1200&auto=format&fit=crop"
+                alt="crypto">
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Let's Connect</h2>
+
+        <p class="section-text">
+            Open for creative projects and futuristic website collaborations.
+        </p>
+
+        <a href="https://forms.gle/iNxD31gPzHecoJmR6" class="btn">Connect Now</a>
+    </section>
+
+    <footer>
+        © 2026 Santonu Paul | Full Stack Developer | Kolkata, West Bengal
+    </footer>
+
+</body>
+
+</html>
